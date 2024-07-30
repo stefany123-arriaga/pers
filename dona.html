@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UES</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        body {
+            font-family: headline;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: #38b6ff;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .LOGO {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+        nav {
+            flex-grow: 2;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centrar palabras del menú */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px; /* letras un poco más grandes */
+        }
+        nav ul li a:hover {
+            background-color:  #38b6ff; /* Cambiar el color de fondo al pasar el cursor */
+            padding: 15px;
+        }
+        footer {
+            background-color: #38b6ff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        footer p {
+            margin-bottom: 10px;
+        }
+        .donation-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+        .donation-form {
+            display: block;
+            margin: 0 auto;
+            max-width: 400px;
+            text-align: left;
+        }
+        .donation-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .donation-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        .donation-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #38b6ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .donation-form button:hover {
+            background-color: #2a8ed3;
+        }
+        .donation-info {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .admin-section {
+            text-align: center;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .admin-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .admin-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #38b6ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .admin-form button:hover {
+            background-color: #2a8ed3;
+        }
+        .donation-list {
+            display: none;
+            text-align: left;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\DELL\Downloads\e.png" class="LOGO">
+        <nav>
+            <ul>
+                 <li><a href="index.html">INICIO</a></li>
+                <li><a href="conoce.html">ACERCA DE</a></li>
+                <li><a href="evi.html">EVIDENCIA</a></li>
+                <li><a href="dona.html">DONACIÓN</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="donation-section">
+        <h2>Donar Dinero</h2>
+        <div class="donation-form">
+            <form id="donation-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="card_number">Número de Tarjeta:</label>
+                <input type="text" id="card_number" name="card_number" required>
+                
+                <label for="expiry_date">Fecha de Vencimiento:</label>
+                <input type="text" id="expiry_date" name="expiry_date" required>
+                
+                <label for="cvv">Código de Seguridad:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                
+                <button type="submit">Donar</button>
+            </form>
+        </div>
+        <div class="donation-info">
+            <p>También puedes donar ropa y comida. Para más información, por favor contáctanos en: <a href="mailto:stefanyarriaga936@gmail.com">stefanyarriaga936@gmail.com</a></p>
+        </div>
+    </div>
+    
+    <div class="admin-section">
+        <h2>Ver Donaciones</h2>
+        <form class="admin-form">
+            <label for="admin-password">Contraseña de Administrador:</label>
+            <input type="password" id="admin-password" required>
+            <button type="button" onclick="checkAdminPassword()">Ingresar</button>
+        </form>
+    </div>
+    
+    <div class="donation-list" id="donation-list">
+        <h2>Donaciones Recibidas</h2>
+        <ul id="donation-entries"></ul>
+    </div>
+
+    <footer>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <!-- Enlaces a redes sociales -->
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/D'elia P'az?igsh=c2N5OHBxc2I4OXRh&utm_source=qr"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/gissellypaz?igsh=c2N5OHBxc2I4OXRh&utm_source=qr"><i class="fab fa-instagram"></i></a>
+            <!-- Agrega más iconos de redes sociales según sea necesario -->
+        </div>
+        <p>&copy; 2024 <br> STEFANY ARRIAGA</p>
+    </footer>
+    
+    <script>
+        document.getElementById('donation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const cardNumber = document.getElementById('card_number').value;
+            const expiryDate = document.getElementById('expiry_date').value;
+            const cvv = document.getElementById('cvv').value;
+
+            const donation = {
+                name: name,
+                email: email,
+                cardNumber: cardNumber,
+                expiryDate: expiryDate,
+                cvv: cvv
+            };
+
+            let donations = JSON.parse(localStorage.getItem('donations')) || [];
+            donations.push(donation);
+            localStorage.setItem('donations', JSON.stringify(donations));
+
+            alert('Gracias por tu donación!');
+            document.getElementById('donation-form').reset();
+        });
+
+        function checkAdminPassword() {
+            const password = document.getElementById('admin-password').value;
+            if (password === 'SPROUSEE') {
+                document.querySelector('.admin-section').style.display = 'none';
+                document.getElementById('donation-list').style.display = 'block';
+                displayDonations();
+            } else {
+                alert('Contraseña incorrecta');
+            }
+        }
+
+        function displayDonations() {
+            const donations = JSON.parse(localStorage.getItem('donations')) || [];
+            const donationEntries = document.getElementById('donation-entries');
+            donationEntries.innerHTML = '';
+            donations.forEach(donation => {
+                const li = document.createElement('li');
+                li.textContent = `Nombre: ${donation.name}, Email: ${donation.email}, Tarjeta: ${donation.cardNumber}, Vencimiento: ${donation.expiryDate}, CVV: ${donation.cvv}`;
+                donationEntries.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UES</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        body {
+            font-family: headline;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: #38b6ff;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .LOGO {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+         .title-container {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        .title-container h1 {
+            margin: 0 5px;
+        }
+        .orange {
+            color: orange;
+        }
+        .green {
+            color: green;
+        }
+        .yellow {
+            color: yellow;
+        }
+        nav {
+            flex-grow: 2;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centrar palabras del menú */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px; /* letras un poco más grandes */
+        }
+       nav ul li a:hover {
+            background-color:  #38b6ff; /* Cambiar el color de fondo al pasar el cursor */
+            padding: 15px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        footer {
+            background-color: #38b6ff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        footer p {
+            margin-bottom: 10px;
+        }
+        .redes-sociales a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .redes-sociales a:hover {
+            text-decoration: underline;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            height: 200px;
+        }
+        .extra-images {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .extra-images .extra-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .extra-images .extra-image-container:hover {
+            background-color: #f0f0f0;
+            transition: background-color 0.3s;
+        }
+        .extra-images img {
+            width: 80%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .story {
+            font-style: italic;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="C:\Users\DELL\Downloads\e.png" class="LOGO">
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="conoce.html">ACERCA DE</a></li>
+                <li><a href="evi.html">EVIDENCIA</a></li>
+                <li><a href="dona.html">DONACIÓN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <center>
+        <div class="title-container">
+            <h1 class="orange">Unión</h1>
+            <h1 class="green">Esperanza</h1>
+            <h1>Y</h1>
+            <h1 class="yellow">Solidatidad</h1>
+        </div>
+        <h2>Hago las cosas de corazón porque recuerdo todas las veces que deseaba tener esa ayuda.</h2>
+    </center>
+    <hr>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://i.pinimg.com/564x/21/7a/fc/217afcf2acb503266155837302adecfb.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.pinimg.com/564x/ff/3e/1c/ff3e1cab6515a38497bc75f434867ddb.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="https://i.pinimg.com/564x/73/8e/99/738e9991a6adc4f8984765c501f536db.jpg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <div class="extra-images">
+        <div class="extra-image-container">
+            <a href="evi.html"><img src="https://s.france24.com/media/display/ebaf0a68-82df-11ed-ae11-005056a97e36/w:980/p:16x9/fbacf8d60c04a6e7f1dbb6fa4bb52b29d7c60a30.jpg" alt="Helping hand"></a>
+            <p class="story">La familia Mejía había perdido su hogar en un incendio devastador. Con la ayuda de nuestra organización, pudieron encontrar refugio temporal y recibir apoyo emocional para comenzar de nuevo.</p>
+        </div>
+        <div class="extra-image-container">
+            <a href="evi.html"><img src="https://fermoctezuma.news/wp-content/uploads/2023/10/otis-ayuda.jpg?w=1200" alt="Community support"></a>
+            <p class="story">Después del huracán, la comunidad se unió para limpiar y reconstruir juntos. La solidaridad y el trabajo en equipo demostraron que juntos podemos superar cualquier desafío.</p>
+        </div>
+        <div class="extra-image-container">
+            <a href="evi.html"><img src="https://static.mercadonegro.pe/wp-content/uploads/2020/03/22195415/coronavirus-peru-cuarentena-donaciones-banco-de-alimentos.jpg" alt="Volunteer work"></a>
+            <p class="story">Los voluntarios dedicaron su tiempo y esfuerzo para brindar comida y cuidado a los más necesitados en nuestra comunidad. Su generosidad inspiró a muchos otros a unirse y ayudar.</p>
+        </div>
+    </div>
+    <footer>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="https://m.facebook.com/profile.php?mibextid=LQQJ4d" target="_blank"><img src="C:\Users\alexa\Downloads\2023_Facebook_icon.svg"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/gissellypaz?igsh=c2N5OHBxc2I4OXRh&utm_source=qr"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 <br> STEFANY ARRIAGA</p>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+        });
+    </script>
+</body>
+</html>

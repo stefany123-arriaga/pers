@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UES</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        body {
+            font-family: headline;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: #38b6ff;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .LOGO {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+       nav {
+            flex-grow: 2;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centrar palabras del menú */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px; /* letras un poco más grandes */
+        }
+       nav ul li a:hover {
+            background-color:  #38b6ff; /* Cambiar el color de fondo al pasar el cursor */
+            padding: 15px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .image-container {
+            margin: 20px;
+            width: 300px;
+            cursor: pointer;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+        .story {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            display: none;
+        }
+        footer {
+            background-color: #38b6ff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        footer p {
+            margin-bottom: 10px;
+        }
+        .redes-sociales a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .redes-sociales a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="C:\Users\DELL\Downloads\e.png" class="LOGO">
+    <nav>
+        <ul>
+             <li><a href="index.html">INICIO</a></li>
+                <li><a href="conoce.html">ACERCA DE</a></li>
+                <li><a href="evi.html">EVIDENCIA</a></li>
+                <li><a href="dona.html">DONACIÓN</a></li>
+        </ul>
+    </nav>
+</header>
+ <div class="container">
+        <div class="image-container" onclick="showStory('story1')">
+            <img src="https://www.panama24horas.com.pa/wp-content/uploads/2024/04/Miviot-Incendio.jpg" alt="Familia">
+            <div id="story1" class="story">
+                <p>Esta es una imagen de una familia que perdió su hogar en un incendio devastador. Con la ayuda de nuestra organización, pudieron encontrar refugio temporal y recibir apoyo emocional para comenzar de nuevo.</p>
+            </div>
+        </div>
+        <div class="image-container" onclick="showStory('story2')">
+            <img src="https://logistica.enfasis.com/wp-content/uploads/adjuntos/145/imagenes/000/105/0000105124.JPG" alt="Comunidad">
+            <div id="story2" class="story">
+                <p>Esta es una imagen de una comunidad unida después de un desastre natural. La solidaridad y el trabajo en equipo demostraron que juntos podemos superar cualquier desafío.</p>
+            </div>
+        </div>
+        <div class="image-container" onclick="showStory('story3')">
+            <img src="https://live.staticflickr.com/4381/36562716793_62023c160f_b.jpg" alt="Voluntarios">
+            <div id="story3" class="story">
+                <p>Esta es una imagen de voluntarios dedicando su tiempo y esfuerzo para brindar comida y cuidado a los más necesitados en nuestra comunidad. Su generosidad inspiró a muchos otros a unirse y ayudar.</p>
+            </div>
+        </div>
+        <div class="image-container" onclick="showStory('story4')">
+            <img src="https://media.children.org/cdn-8da7540270f0900/globalassets/04_make-a-difference/tutoring/tutoringfy19-bnr.jpg/ScreenXS" alt="Niños">
+            <div id="story4" class="story">
+                <p>Esta es una imagen de niños felices recibiendo educación y oportunidades gracias a nuestra organización. Creemos en el poder transformador de la educación y estamos comprometidos a brindar un futuro brillante para cada niño.</p>
+            </div>
+        </div>
+        <div class="image-container" onclick="showStory('story5')">
+            <img src="https://diario.mx/jrz/media/uploads/galeria/2022/02/06/20220206020349-0-1894866.jpg" alt="Refugio">
+            <div id="story5" class="story">
+                <p>Esta es una imagen de un refugio temporal que proporcionamos para aquellos que han perdido sus hogares. Creemos en brindar seguridad y apoyo a quienes más lo necesitan en momentos difíciles.</p>
+            </div>
+        </div>
+        <div class="image-container" onclick="showStory('story6')">
+            <img src="https://www.bancomundial.org/content/dam/photos/1440x600/2018/dec/UHC-1-.jpg" alt="Servicios médicos">
+            <div id="story6" class="story">
+                <p>Esta es una imagen de nuestro equipo médico proporcionando servicios de atención médica gratuita a comunidades desatendidas. Estamos comprometidos a mejorar la salud y el bienestar de todos.</p>
+            </div>
+        </div>
+      <div class="image-container" onclick="showStory('story7')">
+    <img src="https://coordinadoraongd.org/wp-content/uploads/2017/09/M%C3%A9xico.jpg" alt="Reconstrucción después del terremoto">
+    <div id="story7" class="story">
+        <p>En una comunidad devastada por un terremoto, nuestra organización se movilizó rápidamente para brindar ayuda. Desde la distribución de suministros de emergencia hasta la construcción de refugios temporales, trabajamos incansablemente para ayudar a las familias a reconstruir sus vidas.</p>
+    </div>
+</div>
+
+<div class="image-container" onclick="showStory('story8')">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ06SnHg5F1V2lD_I6QpjKlRyDsntEqPDYULw&s" alt="Apoyo educativo a niños desfavorecidos">
+    <div id="story8" class="story">
+        <p>Con el objetivo de brindar oportunidades educativas a niños desfavorecidos, lanzamos un programa de tutoría después de la escuela. A través de clases de refuerzo y actividades creativas, ayudamos a estos niños a desarrollar habilidades académicas y sociales clave para un futuro más brillante.</p>
+    </div>
+</div>
+
+<div class="image-container" onclick="showStory('story9')">
+    <img src="https://bvsalud.org/portal-lis/files/2018/10/saude-mental-espanhol-624x349.jpg" alt="Campaña de concienciación sobre la salud mental">
+    <div id="story9" class="story">
+        <p>Reconociendo la importancia de la salud mental en nuestra comunidad, organizamos una campaña de concienciación. Ofrecimos sesiones informativas, talleres de autocuidado y recursos para ayudar a las personas a comprender y abordar los desafíos de salud mental. Esta iniciativa ayudó a destigmatizar el tema y ofreció apoyo a aquellos que lo necesitaban.</p>
+    </div>
+</div>
+
+        </div>
+    <!-- Agrega más contenedores de imágenes con sus historias aquí -->
+</div>
+<footer>
+    <p>Síguenos en nuestras redes sociales:</p>
+    <!-- Enlaces a redes sociales -->
+    <div class="redes-sociales">
+        <a href="https://www.facebook.com/D'elia P'az?igsh=c2N5OHBxc2I4OXRh&utm_source=qr"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/gissellypaz?igsh=c2N5OHBxc2I4OXRh&utm_source=qr"><i class="fab fa-instagram"></i></a>
+        <!-- Agrega más iconos de redes sociales según sea necesario -->
+    </div>
+    <p>&copy; 2024 <br> STEFANY ARRIAGA</p>
+</footer>
+<script>
+    function showStory(storyId) {
+        // Oculta todas las historias
+        var stories = document.querySelectorAll('.story');
+        stories.forEach(function(story) {
+            story.style.display = 'none';
+        });
+        // Muestra la historia correspondiente
+        var story = document.getElementById(storyId);
+        story.style.display = 'block';
+    }
+</script>
+</body>
+</html>
